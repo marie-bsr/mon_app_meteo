@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_grey">
+
+    <TextView
+        android:id="@+id/text_view_no_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_connection"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_view_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Erreur"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_current_city"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/background_orange"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/text_view_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/text_view_city_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city_desc"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_view_city_weather"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:src="@drawable/weather_sunny_white" />
+
+            <TextView
+                android:id="@+id/text_view_city_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="right"
+                android:text="@string/city_temp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xlarge" />
+        </LinearLayout>
+    </LinearLayout>
+
+<!--
+    <EditText
+        android:id="@+id/edit_text_message"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="Votre message"
+        android:paddingTop="200dp" />
+-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+</RelativeLayout>
